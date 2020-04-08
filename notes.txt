@@ -1,0 +1,1 @@
+%{start: {modulename, :start_link, []}, id: {:consumer, i}}

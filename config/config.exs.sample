@@ -1,0 +1,9 @@
+#config/config.exs
+use Mix.Config
+
+config :logger, :console,
+	metadata: [:shard]
+	
+config :nostrum,
+	token: "[YOU BOT TOKEN]",
+	num_shards: :auto
