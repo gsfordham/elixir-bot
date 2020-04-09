@@ -15,7 +15,7 @@ defmodule ElixirBot.MixProject do
 	def application do
 		[
 			#applications: [:httppoison, :nostrum, :plug_cowboy],
-			applications: [:nostrum],
+			applications: [:timex, :nostrum],
 			extra_applications: [:logger, :runtime_tools],
 			mod: {ElixirBot.Bot, []}
 		]
@@ -28,7 +28,8 @@ defmodule ElixirBot.MixProject do
 			# {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
 			#{:coxir, git: "https://github.com/satom99/coxir.git"}
 			#Don't use coxir
-			{:nostrum, [env: :prod, git: "https://github.com/Kraigie/nostrum.git"]}
+			{:nostrum, [env: :prod, git: "https://github.com/Kraigie/nostrum.git"]},
+			{:timex, "~>3.5"}
 			#{:nostrum, "~> 0.4"}
 		]
 	end

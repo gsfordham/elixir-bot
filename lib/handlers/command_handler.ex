@@ -13,11 +13,8 @@ defmodule ElixirBot.EventHandler.Command do
 		#IO.puts(hd fword)
 		case fword do
 			"#!boop" ->
-					IO.puts("Was booped in channel: #{message.channel_id()}")
-					e = %Embed{}
-					|> Embed.put_title("Booped")
-					|> Embed.put_description("The booping occurred in this channel")
-					Api.create_message(message.channel_id(), embed: e)
+					#IO.puts("Was booped in channel: #{message.channel_id()}")
+					ElixirBot.Command.Ping.run(message)
 			_ -> nil
 		end
 		#IO.puts("Message has content: #{message.content()}")
