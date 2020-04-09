@@ -12,9 +12,11 @@ defmodule ElixirBot.EventHandler.Command do
 		fword = hd String.split(message.content(), ~r{\s}, parts: 2)
 		#IO.puts(hd fword)
 		case fword do
-			"#!boop" ->
-					#IO.puts("Was booped in channel: #{message.channel_id()}")
-					ElixirBot.Command.Ping.run(message)
+			x when x in ["#!boop", "#!ping"] ->
+				#IO.puts("Was booped in channel: #{message.channel_id()}")
+				ElixirBot.Command.Ping.run(message)
+			"#!info" ->
+				ElixirBot.Command.BotInfo.run(message)
 			_ -> nil
 		end
 		#IO.puts("Message has content: #{message.content()}")
