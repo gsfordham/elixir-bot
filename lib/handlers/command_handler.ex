@@ -17,6 +17,10 @@ defmodule ElixirBot.EventHandler.Command do
 				ElixirBot.Command.Ping.run(message)
 			"#!info" ->
 				ElixirBot.Command.BotInfo.run(message)
+			"#!user" -> 
+				ElixirBot.Command.UserInfo.user(message)
+			"#!avatar" ->
+				ElixirBot.Command.UserInfo.avatar(message)
 			_ -> nil
 		end
 		#IO.puts("Message has content: #{message.content()}")

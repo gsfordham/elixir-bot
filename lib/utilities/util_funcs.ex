@@ -20,4 +20,9 @@ defmodule ElixirBot.Utils do
 		end
 		%{bot_user: bot, error: error}
 	end
+	
+	# Get information on the current user
+	def get_user(message) do
+		
+	end
 end

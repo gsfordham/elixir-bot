@@ -1,0 +1,1 @@
+small reminder: if you're trying to use ytdl/ffmpeg for a music bot, it's far more efficient and most likely easier to just roll an elixir andesite/lavalink client

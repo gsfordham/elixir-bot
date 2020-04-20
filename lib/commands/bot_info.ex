@@ -38,11 +38,11 @@ defmodule ElixirBot.Command.BotInfo do
 								{_, dt, _} = DateTime.from_iso8601(mem.joined_at)
 								#IO.puts("DATETIME: #{inspect dt}")
 								e
-								|> Embed.put_field("Member", "- AKA: '#{
+								|> Embed.put_field("Member", "⚗ AKA: '#{
 									 if mem.nick == nil do u.username else mem.nick end
-								}'\n- Since: #{dt.year}-#{
+								}'\n⚗ Since: #{dt.year}-#{
 									String.pad_leading("#{dt.month}", 2, "0")}-#{
-									String.pad_leading("#{dt.day}", 2,"0")}\n-- (#{
+									String.pad_leading("#{dt.day}", 2,"0")}\n🧪🧪 (#{
 									String.pad_leading("#{dt.hour}", 2, "0")}:#{
 									String.pad_leading("#{dt.minute}", 2, "0")}:#{
 									String.pad_leading("#{dt.second}", 2, "0")})")
